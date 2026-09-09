@@ -19,7 +19,7 @@ If you are using **AI Coding Agents** like Claude, Codex, Gemini, or tools like 
 - **Memory Agent Skills (`handoff`/`pickup`)**: Pause long agentic coding sessions and resume them perfectly without losing context or wasting tokens on re-reading history.
 - **Progressive Disclosure**: Agents start at a tiny root file and are dynamically routed to only the context they need, keeping prompts surgical and focused.
 - **The Critic Fleet**: Specialized AI Personas built-in (e.g., `ui-ux-designer`, `stack-architect`, `db-verify`) to enforce clean code and DRY principles.
-- **Multi-LLM Universality**: Zero-config entry points out of the box for `claude.md`, `codex.md`, and `gemini.md`.
+- **Multi-LLM Universality**: Zero-config entry points out of the box for `CLAUDE.md`, `AGENTS.md`, and `GEMINI.md`.
 
 ---
 
@@ -28,9 +28,9 @@ If you are using **AI Coding Agents** like Claude, Codex, Gemini, or tools like 
 ```mermaid
 graph TD
     A[Agent Entry] --> B{LLM Type}
-    B -->|Claude| C(claude.md)
-    B -->|Codex| D(codex.md)
-    B -->|Gemini| E(gemini.md)
+    B -->|Claude| C(CLAUDE.md)
+    B -->|Codex| D(AGENTS.md)
+    B -->|Gemini| E(GEMINI.md)
     C --> F((agent.md))
     D --> F
     E --> F
@@ -42,7 +42,7 @@ graph TD
 
 ## 📂 Project Structure
 - `agent.md`: The central entry point router for the AI.
-- `claude.md`, `codex.md`, `gemini.md`: Zero-config entry points.
+- `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`: Zero-config entry points that each LLM natively discovers.
 - `.agent/settings.json`: Hard limits and read denials to prevent context bloat.
 - `.agent/repo-map.md`: Architectural map to prevent blind glob searches.
 - `.agent/hooks.json`: Definitions of pre/post execution hooks.
@@ -54,7 +54,7 @@ graph TD
 ## 🛠️ Quickstart
 
 1. **Clone or Drop** this repository into your project root.
-2. **Point your Agent**: Depending on your LLM, instruct your agent to read `claude.md`, `codex.md`, or `gemini.md`.
+2. **Point your Agent**: Each LLM auto-discovers its own entry file (`CLAUDE.md`, `AGENTS.md`, or `GEMINI.md`) — no manual instruction needed.
 3. **Customize**: Edit `.agent/repo-map.md` to reflect your actual project architecture.
 4. **Code!** Watch your token costs plummet while code quality skyrockets.
 
