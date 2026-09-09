@@ -61,5 +61,5 @@ graph TD
 ---
 
 ## 👨‍💻 About the Author
-Created with precision by **Ammar**. 
+Created with precision by **Ammar Qwaider**. 
 - Feel free to open issues or PRs to expand the Critic Fleet or add new Agentic Skills!
