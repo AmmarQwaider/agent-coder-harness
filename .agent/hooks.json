@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${AGENT_HARNESS_ROOT}\"/.agent/hooks/protected-branch-guard.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${AGENT_HARNESS_ROOT}\"/.agent/hooks/verify-loop.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

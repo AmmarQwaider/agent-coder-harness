@@ -1,0 +1,33 @@
+{
+  "access_controls": {
+    "deny_read": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/*.log",
+      "**/coverage/**",
+      "**/.git/**",
+      "**/tmp/**",
+      "**/.env"
+    ],
+    "deny_write": [
+      "**/.git/**"
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Read(./node_modules/**)",
+      "Read(./dist/**)",
+      "Read(./build/**)",
+      "Read(./bin/**)",
+      "Read(./obj/**)",
+      "Read(./coverage/**)",
+      "Read(./**/*.log)",
+      "Read(./**/*.lock)"
+    ]
+  },
+  "behavior": {
+    "require_plan_approval": true,
+    "force_compressed_output": true
+  }
+}
