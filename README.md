@@ -62,5 +62,4 @@ graph TD
 
 ## 👨‍💻 About the Author
 Created with precision by **Ammar**. 
-- Email: ammar.qwaider@gmail.com
 - Feel free to open issues or PRs to expand the Critic Fleet or add new Agentic Skills!
