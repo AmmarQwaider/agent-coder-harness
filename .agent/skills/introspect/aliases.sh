@@ -17,10 +17,10 @@ TARGET="${1:?usage: aliases.sh <target-dir>}"
   exit 1
 }
 
-S='<!-- harness-kit:import:start -->'
-E='<!-- harness-kit:import:end -->'
+S='<!-- agent-coder-harness:import:start -->'
+E='<!-- agent-coder-harness:import:end -->'
 # The @import line is plain (not fenced) so Claude Code expands it; the HTML-comment
 # markers make the block idempotently replaceable and visible as generated.
 block="$(printf '%s\n@AGENTS.md\n%s\n' "$S" "$E")"
 printf '%s' "$block" | bash "$HERE/update-block.sh" "$TARGET/CLAUDE.md" "$S" "$E"
-echo "aliases: CLAUDE.md imports AGENTS.md (harness-kit:import block)"
+echo "aliases: CLAUDE.md imports AGENTS.md (agent-coder-harness:import block)"

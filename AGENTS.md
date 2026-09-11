@@ -1,4 +1,4 @@
-# Codex Configuration
+# Agent Configuration
 
 You are operating within the `agent-coder-harness`.
 

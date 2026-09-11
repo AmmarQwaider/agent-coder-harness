@@ -13,10 +13,10 @@ allowed-tools: Bash, Read
 
 Each code-change task gets its own worktree, so the main checkout stays clean and
 parallel tasks don't collide. (Only relevant if the repo opted into this workflow
-at introspect time — `.claude/harness-kit.json` `worktree_workflow: true`.)
+at introspect time — `.agent/settings.json` `worktree_workflow: true`.)
 
 1. **Create:** from the repo root, run
-   `bash "${CLAUDE_PLUGIN_ROOT}/skills/worktree/new-worktree.sh" "<slug>" [base]`.
+   `bash "${AGENT_HARNESS_ROOT:-.}/.agent/skills/worktree/new-worktree.sh" "<slug>" [base]`.
    It creates `../<repo>-<slug>` on a new branch `<slug>` (from `base`, default
    `HEAD` — pass your integration branch to branch off it) and prints the path.
 2. **Work there:** make the task's edits in that worktree (`cd` into it, or

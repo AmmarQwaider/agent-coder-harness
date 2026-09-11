@@ -1,12 +1,12 @@
 ---
 name: introspect
 description: >-
-  Scan a repository's tech stack and generate a tailored Claude Code harness for
-  it — a thin .claude/CLAUDE.md spine, stack-specific architect agent(s), and
-  specs/ADR scaffolding — fitting the generic harness-kit engine to this repo.
+  Scan a repository's tech stack and generate a tailored agent harness for
+  it — an AGENTS.md / CLAUDE.md spine, stack-specific architect agent(s), and
+  specs/ADR scaffolding — fitting the generic agent-coder-harness engine to this repo.
   Use when setting up the harness in a new or existing repo, or when the user
-  says "set up the harness here", "introspect this repo", "tailor claude config",
-  "scaffold .claude for this project".
+  says "set up the harness here", "introspect this repo", "tailor agent config",
+  "scaffold harness for this project".
 argument-hint: "[target-dir]"
 allowed-tools: Read, Grep, Glob, Bash, Write, Edit
 ---
@@ -15,11 +15,11 @@ allowed-tools: Read, Grep, Glob, Bash, Write, Edit
 
 You generate the **repo-specific layer** of the harness. The **generic engine**
 (change-verifier and other critic agents, portable skills, the protected-branch
-guard hook) already ships in the installed `harness-kit` plugin and fires
+guard hook) already ships in the `agent-coder-harness` and fires
 everywhere — do NOT regenerate or duplicate it. Your job is only what is specific
-to THIS repository: the CLAUDE.md spine, the stack architect(s), and scaffolding.
+to THIS repository: the spine, the stack architect(s), and scaffolding.
 
-Templates live at `${CLAUDE_PLUGIN_ROOT}/templates/`. Read them, fill the slots,
+Templates live at `${AGENT_HARNESS_ROOT:-.}/.agent/templates/`. Read them, fill the slots,
 write the result into the target repo. Never invent a stack you did not observe.
 
 ## 1. Resolve the target
@@ -75,7 +75,7 @@ any locale — handle these before the normal path):
 - **No manifest at all (blank / greenfield repo)** → there is no stack to tailor.
   Generate ONLY the generic §0 discipline spine; keep the stack-specific slots minimal
   or empty (no architect, no critics — `render.sh` correctly writes nothing), and add one
-  line: *"No stack detected yet — re-run `/harness-kit:introspect` once you add a manifest
+  line: *"No stack detected yet — re-run `/agent:introspect` once you add a manifest
   (package.json / pyproject.toml / go.mod / Cargo.toml / Gemfile / pom.xml) to tailor the
   architect + critics."* Don't fabricate a stack.
 - **A manifest `detect.sh` doesn't cover** (composer.json / mix.exs / *.csproj /

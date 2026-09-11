@@ -18,7 +18,7 @@ One behavior at a time. Never write implementation before a failing test for it.
 ## The loop
 1. **🔴 Red** — write the smallest test that expresses the next behavior. Run it
    with the repo's runner (the `verify_command` / test command from
-   `.claude/harness-kit.json`). Confirm it FAILS, and fails for the RIGHT reason
+   `.agent/settings.json`). Confirm it FAILS, and fails for the RIGHT reason
    (asserting the missing behavior — not a typo / import error). A test that
    passes immediately, or fails for the wrong reason, tells you nothing.
 2. **🟢 Green** — write the MINIMUM implementation to make it pass. No extra

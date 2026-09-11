@@ -2,8 +2,8 @@
 
 ## 0. Resume here
 <!-- The live working-set state, so a fresh session (or a post-compaction self)
-     can resume without re-narration. Write it with `/harness-kit:handoff` at a
-     stopping point; a fresh session continues from it with `/harness-kit:pickup`. -->
+     can resume without re-narration. Write it with `handoff` (or `/agent:handoff`) at a
+     stopping point; a fresh session continues from it with `pickup` (or `/agent:pickup`). -->
 <!-- resume:start -->
 - **Original ask (verbatim):**
 - **Phase / N of M:**

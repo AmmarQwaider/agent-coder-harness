@@ -16,8 +16,8 @@ the user to re-narrate.
 
 1. **Find the resume block.** Prefer an active spec's `specs/*/context.md`
    `## 0. Resume here` block (use the `[spec-slug]` arg to disambiguate when several
-   exist) — that is where `/harness-kit:handoff` writes when a spec is active; fall
-   back to `.claude/handoff.md`. When both exist, use the most recently modified —
+   exist) — that is where `handoff` (or `/agent:handoff`) writes when a spec is active; fall
+   back to `.agent/handoff.md`. When both exist, use the most recently modified —
    it is the freshest handoff. If none is found, say so plainly — don't guess.
 2. **Read it fully**, then re-ground in the repo: `git status --short`,
    `git log --oneline -5`, and read the files it lists. Confirm the stated state

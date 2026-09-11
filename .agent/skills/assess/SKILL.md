@@ -71,7 +71,7 @@ labels in words, not jargon — a reader must decide from each row (route to
 Pick the 3 highest severity×(low effort) findings. For each: the file, why it's a
 risk (the signal), and the concrete change (split the god-file, add a
 characterization test before refactoring the hotspot, fix the lint debt). Hand the
-chosen one to `/harness-kit:new-spec` — one fix, one PR, one human gate. Do NOT
+chosen one to `new-spec` (or `/agent:new-spec`) — one fix, one PR, one human gate. Do NOT
 auto-apply.
 
 ## Constraints

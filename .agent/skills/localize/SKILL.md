@@ -29,7 +29,7 @@ From the request, find the exact edit site(s). Do NOT edit in this phase.
   symptom, endpoint / field / component name, the file it mentions.
 - Search from those signals: `grep` the error string / symbol; `glob` the module;
   read the suspected files. For a symbol you will change, run
-  `/harness-kit:blast-radius <symbol>` to enumerate everything that depends on it,
+  `blast-radius` (or `/agent:blast-radius <symbol>`) to enumerate everything that depends on it,
   so the edit scope is known up front (not discovered after a half-fix).
 - If tests exist, use the failing test (or write one that reproduces the symptom)
   to point at the fault — a failing test IS localization evidence.

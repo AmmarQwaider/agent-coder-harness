@@ -1,4 +1,4 @@
-# Codex / GPT Instructions
+# Codex Configuration
 
 You are operating within the `agent-coder-harness`.
 
